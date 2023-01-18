@@ -1,0 +1,18 @@
+Python Challenge
+The Goal of this challenge is to assess the following skills
+• Python experience
+• Logic
+• Ability to write clean code
+• Data cleaning
+Lodgify is a SAAS company, on occasion our customers cancel their subscription and after some time subscribe again (reactivation). Sometimes users cancel their subscription before their paid time is finished so they are still able to use Lodgify even though they do not have an active subscription.
+Two CSV Files are provided.
+• Subscription History: Snapshots of the subscriptions at the last day of every month for every customer (if a customer. If a subscription’s status is canceled on the last day of a month, we accept that they canceled their subscription at the start of the month, so we assume that they are canceled for the whole month
+• Booking history, every booking request they had gotten and with their status. In order to analyze our customer behavior financials analysts ask for the following
+data:
+For every customer on the monthly grain:
+• How many months has passed since their first subscription month?
+• How many months they were an active/canceled subscriber?
+• How many months has passed since their last subscription status change?
+• How many confirmed bookings did they receive
+Data for this question will be a bit dirty, two different statuses for the same user same month or a missing month between two dates, please accept the status on previous existing/single month.
+Write a python script to extract the data required by the business analyst and export to it to csv file.
