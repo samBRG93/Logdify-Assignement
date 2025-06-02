@@ -1,7 +1,4 @@
-from datetime import datetime
 import pandas as pd
-from dateutil import relativedelta
-
 from user_analysis import UserAnalysis
 
 
@@ -9,7 +6,7 @@ class BookingAnalysis(UserAnalysis):
     def __init__(self):
         self.df = self.__clean_data(pd.read_csv('Bookings.csv', sep=','))
         self.df.rename(columns={'subscriber_id': 'sub_id'}, inplace=True)
-        print(self.df.columns)
+        print(f"Dataframe Columns: {self.df.columns}")
 
     def _run(self):
         user_ids = self.df['sub_id'].unique()
@@ -23,7 +20,6 @@ class BookingAnalysis(UserAnalysis):
             df_result = pd.concat([df_result, self._analyze_user(df_usr)])
             if i % 100 == 0:
                 print(f'iteration: {i} df_usr.shape: {df_usr.shape}')
-
             i += 1
 
         return df_result

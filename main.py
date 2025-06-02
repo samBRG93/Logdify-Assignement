@@ -2,7 +2,7 @@ from booking_analysis import BookingAnalysis
 from sub_analysis import SubscriptionsAnalysis
 
 
-def __run_users_analysis():
+def _run_users_analysis():
     booking_analysis = BookingAnalysis()
     sub_analysis = SubscriptionsAnalysis()
 
@@ -14,4 +14,4 @@ def __run_users_analysis():
 
 
 if __name__ == '__main__':
-    __run_users_analysis()
+    _run_users_analysis()
